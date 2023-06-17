@@ -133,7 +133,7 @@
         </div>
       </v-col>
       <v-col cols="12" class="imgHover">
-        <v-row align="center" justify="center">
+        <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
             <v-col cols="12" md="4">
               <v-hover v-slot="{ isHovering, props }">
@@ -154,46 +154,173 @@
           <v-btn color="#FBDF7E">Load More</v-btn>
         </div>
       </v-col>
+      <v-col cols="12" id="page">
+        <div class="pre">
+          <v-row>
+            <v-col cols="12" sm="4">
+              <v-card class="mx-auto" max-width="344" height="">
+                <v-img src="i10.jpg" height="250px" cover></v-img>
+
+                <v-card-title> We provide you the best </v-card-title>
+
+                <v-card-subtitle>
+                  By AAE IdeaPro | 06 Sep 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  rem saepe sapiente deleniti, odio non laborum fuga.
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-card class="mx-auto" max-width="344" height="">
+                <v-img src="i11.jpg" height="250px" cover></v-img>
+
+                <v-card-title> We provide you the best </v-card-title>
+
+                <v-card-subtitle>
+                  By AAE IdeaPro | 06 Sep 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  rem saepe sapiente deleniti, odio non laborum fuga.
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-card class="mx-auto" max-width="344" height="">
+                <v-img src="i12.jpg" height="250px" cover></v-img>
+
+                <v-card-title> We provide you the best </v-card-title>
+
+                <v-card-subtitle>
+                  By AAE IdeaPro | 06 Sep 2022
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                  rem saepe sapiente deleniti, odio non laborum fuga.
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+      <v-col cols="12" id="biog">
+        <div class="hire">
+          <v-row>
+            <v-col cols="12" sm="8">
+              <h1 class="mt-9">Hire me for your awesome project</h1>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                itaque, eaque molestiae deleniti, earum voluptate eos id dicta
+                at, blanditiis
+              </p>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-btn color="#FBDF7E" class="mt-15">Hire Me</v-btn>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+      <v-col cols="12" sm="12" class="px-16" id="contact">
+        <v-row>
+          <v-col cols="12" sm="4">
+            <div class="child">
+              <h1>Contact info.</h1>
+              <v-btn
+                icon="fas fa-map-marker-alt"
+                color=""
+                class="mt-10"
+                variant="outlined"
+              ></v-btn
+              ><br />
+              <span class="text-caption">Your Street SYO,yourArea Dream </span
+              ><br />
+              <v-btn
+                icon="fas fa-phone-alt"
+                color=""
+                class="mt-10"
+                variant="outlined"
+              ></v-btn
+              ><br />
+              <span class="text-caption">00235 - 6521 </span> <br />
+              <span class="text-caption">00235 - 6521 </span> <br />
+              <v-btn
+                icon="fas fa-envelope"
+                color=""
+                class="mt-10"
+                variant="outlined"
+              ></v-btn
+              ><br />
+              <span class="text-caption">aaeideapro@gmail.com </span> <br />
+              <span class="text-caption">aaeideapro@gmail.com </span> <br />
+            </div>
+          </v-col>
+          <v-col cols="12" sm="8">
+            <h1 class="mt-8">Send your message</h1>
+            <v-divider></v-divider>
+            <span class="text-caption"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              fugiat officia, odio eaque exercitationem libero nesciunt placeat,
+              repellat obcaecati sed tenetur! Est labore aliquam amet
+              consequatur necessitatibus fugit obcaecati facilis!</span
+            >
+            <v-row class="mt-10">
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  label="Name"
+                  persistent-hint
+                  variant="outlined"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  label="Phone No"
+                  persistent-hint
+                  variant="outlined"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-textarea
+              label="Message"
+              persistent-hint
+              variant="outlined"
+            ></v-textarea>
+            <v-btn color="#FBDF7E" class="mt-2">Submit Now</v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-container>
+    <FooterView />
   </v-app>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref } from "vue";
 import NavBar from "@/components/NavBar.vue";
+import FooterView from "@/components/FooterView.vue";
 
-export default defineComponent({
-  name: "HomeView",
-  setup() {
-    return {
-      slider2: 50,
-
-      items: [
-        {
-          img: "i3.jpg",
-        },
-        {
-          img: "i4.jpg",
-        },
-        {
-          img: "i5.jpg",
-        },
-        {
-          img: "i6.jpeg",
-        },
-        {
-          img: "i9.jpg",
-        },
-        {
-          img: "i8.jpg",
-        },
-      ],
-    };
+const slider2 = ref(50);
+const items = ref([
+  {
+    img: "i3.jpg",
   },
-  components: {
-    NavBar,
+  {
+    img: "i4.jpg",
   },
-});
+  {
+    img: "i5.jpg",
+  },
+  {
+    img: "i6.jpeg",
+  },
+  {
+    img: "i9.jpg",
+  },
+  {
+    img: "i8.jpg",
+  },
+]);
 </script>
 
 <style scoped>
@@ -256,7 +383,7 @@ export default defineComponent({
 }
 .pre {
   width: 100%;
-  height: 380px;
+  height: 500px;
   text-align: center;
   padding: 0 200px;
   background-color: #f5f5f5;

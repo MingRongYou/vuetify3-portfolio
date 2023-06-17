@@ -14,14 +14,10 @@
   </v-app-bar>
 </template>
 
-<script>
-export default {
-  methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
-      element.scrollIntoView({ behavior: "smooth" });
-    },
-  },
+<script setup>
+const scroll = (refName) => {
+  const element = document.getElementById(refName);
+  element.scrollIntoView({ behavior: "smooth" });
 };
 </script>
 
